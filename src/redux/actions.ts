@@ -6,7 +6,13 @@ import axios from 'axios';
  * - Use Axios or fetch to get the countries from `/api/countries.json`
  * - Store the result in the reducer
  */
-
+export const getCountries = () => {
+	return dispatch => axios.get('/api/countries.json')
+		.then(res => dispatch({ type: 'COUNTRIES_RECEIVED', payload: res.data }))
+		.catch(function (error) {
+			console.log(error);
+		})
+}
 
 /**
  * TODO:
