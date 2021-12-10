@@ -1,15 +1,25 @@
 import axios from 'axios';
+import { Dispatch } from 'redux';
+import { COUNTRIES_RECEIVED, SET_COUNTRY } from './types';
 
-/**
- * TODO:
- * - Implement getCountries
- * - Use Axios or fetch to get the countries from `/api/countries.json`
- * - Store the result in the reducer
- */
+export const getCountries = () => {
+    return (dispatch: Dispatch) => {
+        const url = `/api/countries.json`;
+        axios
+            .get(url)
+            .then(res => {
+                dispatch({
+                    type: COUNTRIES_RECEIVED,
+                    payload: res.data
+                })
+            });
+    }
+}
 
 
-/**
- * TODO:
- * - Implement setCountry
- * - Store the country in the reducer
- */
+export const setCountry = (data: string) => {
+    return ({
+        type: SET_COUNTRY,
+        payload: data
+    });
+}

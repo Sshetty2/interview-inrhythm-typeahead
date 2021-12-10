@@ -11,5 +11,28 @@
  */
 
 .typeahead {
+    width: 182px;
+}
 
+.typeaheadInput {
+  padding: 5px;
+  border: 1px solid #aaa;
+}
+
+.typeaheadInput:focus {
+  outline: 1px solid #f36b0a;
+  border: 1px solid transparent;
+}
+
+.list{
+    border: 1px #aaa solid;
+    height: 100px;
+    overflow-y: auto;
+}
+
+.option{
+    background-color: grey;
+}
+.option:hover {
+    background-color: white;
 }
