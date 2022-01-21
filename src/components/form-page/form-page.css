@@ -1,0 +1,14 @@
+/*
+  <form>
+    <label>Country: </label>
+    <Typeahead options={countries} onChange={onChange} />
+    <button type="submit">Submit</button>
+    <br />
+    <br />
+    You chose: {country}
+  </form>
+*/
+
+* {
+  font-family: sans-serif;
+}

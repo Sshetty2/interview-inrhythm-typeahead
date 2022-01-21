@@ -10,6 +10,26 @@
  *   - typeahead choices background with hover: #fff
  */
 
-.typeahead {
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-sizing;
+}
 
+.typeahead input {
+  padding: 6px;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  width: 300px;
+}
+
+button {
+  background-color: #f36b0a;
+  border: none;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-weight: bold;
 }

@@ -29,11 +29,7 @@ export const Typeahead = (props) => {
 
   return (
     <div className="typeahead">
-      <input
-        type="text"
-        onChange={handleChange}
-        value={searchText}
-      />
+      <input type="text" onChange={handleChange} value={searchText} placeholder="start typing..." />
       <ul>
         {filteredOptions.map((option) => {
           return (
